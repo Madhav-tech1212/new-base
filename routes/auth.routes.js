@@ -1,11 +1,12 @@
 import { Router } from "express";
-import { signUp } from "../controller/auth.controller";  
-import { signIn } from "../controller/auth.controller";  
-import { signOut } from "../controller/auth.controller";  
+import { signUp,signIn,signOut } from "../controller/auth.controller";  
+
 
 const authRouter = Router();
 
-authRouter.post("/SignUp", signUp);
+// path: /api/v1/auth/sign-up
+
+authRouter.post("/Sign-Up", signUp);
 authRouter.post("/sign-in", signIn);
 authRouter.post("/sign-out", signOut);
 
