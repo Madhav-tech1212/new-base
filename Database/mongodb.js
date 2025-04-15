@@ -9,7 +9,7 @@ const connectDB = async () => {
   try {
     await mongoose.connect(DB_URI, {
     })
-    // eslint-disable-next-line no-undef
+     
     console.log(`MongoDB connected to ${NODE_ENV} successfully`)
   } catch (error) {
     console.error('MongoDB connection error:', error.message)
