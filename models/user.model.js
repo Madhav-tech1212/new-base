@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -15,17 +15,15 @@ const userSchema = new mongoose.Schema({
         trim: true,
         lowercase: true,
         match: [
-            /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-            'Please fill a valid email address',
+            /\S+@\S+\.\S+/, 'Please fill a valid email address',
         ],
     },
     password: {
         type: String,
         required: [true,'User Password is Required'],
         minLength: 6,
-        select: false,
     },
-}, {Timestamps: true});
+}, {timestamps: true});
 
 const User = mongoose.model('User', userSchema);
 
