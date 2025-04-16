@@ -1,7 +1,7 @@
 const errorMiddleware = (err, req, res, next) => {
-
+    
     try{
-        let error = {...err};
+        let error = { ...err };
 
         error.message = err.message;
 
@@ -35,7 +35,9 @@ const errorMiddleware = (err, req, res, next) => {
         });
     
     }catch(error){
+        console.error('Error in error middleware:', error);
         next(error);
+        
     }
 }
 
