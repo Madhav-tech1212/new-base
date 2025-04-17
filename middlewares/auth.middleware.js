@@ -5,7 +5,7 @@ import User from "../models/user.model.js";
 
 
 // some is making a request to get user details -> authorize middle -. verify token - if the token is valid ->get user details -> and give user detials
-const authorize = async (req, res, next) => {
+const   authorize = async (req, res, next) => {
     try {
         let token;
 
