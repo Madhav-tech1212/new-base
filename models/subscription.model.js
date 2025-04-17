@@ -30,7 +30,7 @@ const subscriptionSchema = new mongoose.Schema({
     },
     paymentMethod:{
         type: String,
-        enum: ['credit_card', 'paypal', 'bank_transfer'],
+        enum: ['Credit Card', 'paypal', 'bank_transfer'],
         required: true,
         trim: true,
     },
@@ -39,7 +39,7 @@ const subscriptionSchema = new mongoose.Schema({
         enum: ['active', 'inactive'],
         default: 'active',
     },
-    StartDate:{
+    startDate:{
         type: Date,
         required: [true, 'Subscription Start Date is Required'],
         validate:{
@@ -49,17 +49,17 @@ const subscriptionSchema = new mongoose.Schema({
     },
     renewalDate:{
         type: Date,
-        required: true,
+        // required:true,
         validate:{
             validator: function(value){
-                return value > this.StartDate;
+                return value > this.startDate;
             }, 
             message: 'Renewal date must be after start date',
         }
     },
     user:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'user',
         required: true,
         index: true,
     },
@@ -67,14 +67,14 @@ const subscriptionSchema = new mongoose.Schema({
 
 // Auto calulate the renewal date based on frequency 
 subscriptionSchema.pre('save', function(next) {
-    if (this.renewalDate) {
+    if (!this.renewalDate) {
         const renewalPeriod = {
             daily: 1,
             weekly: 7,
             monthly: 30,
             yearly: 365,
         };
-        this.renewalDate = new Date(this.StartDate);
+        this.renewalDate = new Date(this.startDate);
         this.renewalDate.setDate(this.renewalDate.getDate() + renewalPeriod[this.frequency]);
     }
     // auto update the status of the subscription to inactive if the renewal date is in the past
