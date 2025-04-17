@@ -1,20 +1,78 @@
-{
-  "name":"Inba Sekar",
-  "email":"inbasekar@gmail.com",
-  "password":"123456"
-}
-{
-  "name":"Inba Sekar two",
-  "email":"inbasekar2@gmail.com",
-  "password":"123456"
-}
-{
-  "name":"Inba Sekar one",
-  "email":"inbasekar1@gmail.com",
-  "password":"123456"
-}
-{
-  "name":"madhav karthickk",
-  "email":"madhavkarthickk.1212@gmail.com",
-  "password":"123456"
-}
+[
+  {
+    "name":"Inba Sekar",
+    "email":"inbasekar@gmail.com",
+    "password":"123456"
+  },
+  {
+    "name":"Inba Sekar two",
+    "email":"inbasekar2@gmail.com",
+    "password":"123456"
+  },
+  {
+    "name":"Inba Sekar one",
+    "email":"inbasekar1@gmail.com",
+    "password":"123456"
+  },
+  {
+    "id":"68008da5184f447edee9d02e",
+    "name":"madhav karthickk",
+    "email":"madhavkarthickk.1212@gmail.com",
+    "password":"123456",
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODAwOGRhNTE4NGY0NDdlZGVlOWQwMmUiLCJpYXQiOjE3NDQ4NjY3MjUsImV4cCI6MTc0NDk1MzEyNX0.HpP2fkOJnez3WA9CJ5UEn86izFGuDtgE-mgIbyp_jIw"
+  },
+  {
+    "name": "Amazon Prime",
+    "price": 15.99,
+    "category": "basic",
+    "startDate": "2025-04-03T00:00:00.000Z",
+    "paymentMethod": "Credit Card"
+  },
+  {
+    "_id": "6800a179f852da734ede190e",
+    "name":"maddy",
+    "email":"maddy@gmail.com",
+    "password":"123456",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODAwYTE3OWY4NTJkYTczNGVkZTE5MGUiLCJpYXQiOjE3NDQ4NzE4MDIsImV4cCI6MTc0NDk1ODIwMn0.yrRxwqRwU0_HFgHncNyedELkeD1p-AMCtG0jFn54j20"
+  },
+  {
+    "success": "true",
+    "data": [
+      {
+        "_id": "680090c48e442af30fe170af",
+        "name": "Amazon Prime",
+        "price": 15.99,
+        "category": "basic",
+        "startDate": "2025-04-03T00:00:00.000Z",
+        "paymentMethod": "Credit Card",
+        "currency": "USD",
+        "frequency": "monthly",
+        "status": "active",
+        "user": "68008da5184f447edee9d02e",
+        "createdAt": "2025-04-17T05:25:24.047Z",
+        "updatedAt": "2025-04-17T05:25:24.047Z",
+        "renewalDate": "2025-05-03T00:00:00.000Z",
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "success": "true",
+    "data": {
+      "name": "SUN NXT",
+      "price": 2.99,
+      "currency": "USD",
+      "frequency": "weekly",
+      "category": "basic",
+      "paymentMethod": "Credit Card",
+      "status": "inactive",
+      "startDate": "2025-04-03T00:00:00.000Z",
+      "user": "6800a179f852da734ede190e",
+      "_id": "6800a2bdf852da734ede191a",
+      "createdAt": "2025-04-17T06:42:05.189Z",
+      "updatedAt": "2025-04-17T06:42:05.189Z",
+      "renewalDate": "2025-04-10T00:00:00.000Z",
+      "__v": 0
+    }
+  }
+]
