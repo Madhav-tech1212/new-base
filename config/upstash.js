@@ -10,3 +10,6 @@ export const workflowClient = new WorkflowClient({
 //         next: QSTASH_NEXT_SIGNING_KEY,
 //   },
 });
+
+
+// npx @upstash/qstash-cli dev
